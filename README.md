@@ -22,9 +22,9 @@ Add some ESLint config to your `package.json`:
 
 ```json
 {
-	"eslintConfig": {
-		"extends": "skye"
-	}
+    "eslintConfig": {
+        "extends": "skye"
+    }
 }
 ```
 
@@ -32,6 +32,6 @@ Or to `.eslintrc`:
 
 ```json
 {
-	"extends": "skye"
+    "extends": "skye"
 }
 ```
