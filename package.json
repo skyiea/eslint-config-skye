@@ -1,14 +1,14 @@
 {
   "name": "eslint-config-skye",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ESLint configuration by Sergiy Skye Murygin",
   "main": "index.js",
   "author": "Sergiy Murygin",
   "license": "ISC",
   "keywords": [
-      "eslint",
-      "eslintconfig",
-      "skye"
+    "eslint",
+    "eslintconfig",
+    "skye"
   ],
   "bugs": {
     "url": "https://github.com/skyiea/eslint-config-skye/issues"
@@ -19,6 +19,6 @@
     "url": "git+https://github.com/skyiea/eslint-config-skye.git"
   },
   "files": [
-      "index.js"
+    "index.js"
   ]
 }
