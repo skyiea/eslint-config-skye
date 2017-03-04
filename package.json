@@ -1,9 +1,9 @@
 {
   "name": "eslint-config-skye",
-  "version": "0.0.3",
-  "description": "ESLint configuration by Sergiy Skye Murygin",
+  "version": "1.0.0",
+  "description": "ESLint configuration by Serhii Skye Muryhin",
   "main": "index.js",
-  "author": "Sergiy Murygin",
+  "author": "Serhii Muryhin",
   "license": "ISC",
   "keywords": [
     "eslint",

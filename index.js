@@ -1,37 +1,51 @@
 module.exports = {
     "parser": "babel-eslint",
-    "ecmaFeatures": {
-        "classes": true,
-        "modules": true,
-        "jsx": true
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
     },
     "plugins": [
         "react"
     ],
     "env": {
         "node": true,
-        "es6": true
+        "es6": true,
+        "browser": true
     },
     "globals": {
-        "document": false,
-        "window": false
+        "__ENV__": false,
+        "__RELEASE__": false,
+        "chrome": false,
+        "fetch": false,
+        "ga": true
     },
     "rules": {
         "arrow-spacing": 1,
         "block-spacing": 1,
-        "brace-style": 1,
-        "camelcase": 0,
+        "brace-style": [ 1, "1tbs", {
+            "allowSingleLine": true
+        }],
+        "camelcase": 1,
         "curly": 1,
-        "comma-dangle": 2,
+        "comma-dangle": 0,
         "comma-spacing": 1,
         "dot-notation": 1,
         "dot-location": 1,
         "eol-last": 0,
         "eqeqeq": 1,
-        "indent": [ 2, 4, { "SwitchCase": 1 } ],
+        "indent": [ 1, 4, { "SwitchCase": 1 } ],
         "jsx-quotes": 2,
         "key-spacing": 0,
-        "max-len": [ 1, 120, 4, { "ignoreComments": true, "ignoreUrls": true } ],
+        "keyword-spacing": 1,
+        "max-len": [ 1, {
+            "code": 120,
+            "tabWidth": 4,
+            "ignoreComments": true,
+            "ignoreUrls": true
+        }],
         "newline-after-var": 1,
         "no-cond-assign": 1,
         "no-constant-condition": 1,
@@ -46,7 +60,9 @@ module.exports = {
         "no-loop-func": 0,
         "no-mixed-requires": 1,
         "no-mixed-spaces-and-tabs": 1,
-        "no-multiple-empty-lines": [ 1, { "max": 1 } ],
+        "no-multiple-empty-lines": [ 1, {
+            "max": 1
+        }],
         "no-multi-spaces": [
             1,
             {
@@ -63,40 +79,45 @@ module.exports = {
         "no-undefined": 1,
         "no-underscore-dangle": 0,
         "no-unneeded-ternary": 2,
-        "no-unused-vars": [ 1, { "varsIgnorePattern": "^React$" } ],
+        "no-unused-vars": 1,
         "no-unreachable": 1,
         "no-useless-call": 1,
-        "no-use-before-define": 1,
+        "no-use-before-define": 0,
         "no-var": 1,
         "no-with": 2,
         "object-shorthand": 1,
         "operator-assignment": 2,
-        "operator-linebreak": [ 1, "after", { "overrides": { "?": "after" } } ],
+        "operator-linebreak": [ 1, "after", {
+            "overrides": {
+                "?": "after"
+            }
+        }],
         "prefer-arrow-callback": 1,
         "prefer-const": 1,
         "prefer-spread": 1,
         "quotes": 0,
-        "react/display-name": 0,
-        "react/no-direct-mutation-state": 1,
-        "react/jsx-boolean-value": 2,
-        "react/jsx-closing-bracket-location": [ 1, "after-props" ],
+        "react/jsx-boolean-value": 1,
+        "react/jsx-closing-bracket-location": [ 1, {
+            "nonEmpty": "after-props"
+        }],
+        "react/jsx-curly-spacing": 1,
+        "react/jsx-equals-spacing": 1,
         "react/jsx-indent-props": [ 1, 8 ],
+        "react/jsx-key": 1,
+        "react/jsx-no-duplicate-props": 1,
         "react/jsx-no-undef": 2,
-        "react/jsx-sort-prop-types": 0,
-        "react/jsx-sort-props": 0,
+        "react/jsx-space-before-closing": [ 1, "never" ],
         "react/jsx-uses-react": 2,
         "react/jsx-uses-vars": 2,
+        "react/jsx-wrap-multilines": 2,
         "react/no-did-mount-set-state": 2,
-        "react/no-did-update-set-state": 2,
-        "react/no-multi-comp": 0,
+        "react/no-did-update-set-state": 1,
+        "react/no-direct-mutation-state": 1,
         "react/no-unknown-property": 2,
-        "react/prop-types": 0,
+        "react/prefer-es6-class": 1,
         "react/react-in-jsx-scope": 2,
         "react/self-closing-comp": 1,
-        "react/sort-comp": 0,
-        "react/wrap-multilines": 2,
-        "semi": 2,
-        "space-after-keywords": 1,
+        "semi": 1,
         "space-before-blocks": 1,
         "space-infix-ops": 1,
         "strict": 2
